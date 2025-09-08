@@ -14,3 +14,11 @@ application:
     jwt:
       secret-key: kjZkiL/+bIpdAeYYYrMQCRh0yb+09i/hK23P91sQRBI=
       expiration: 86400000 # 1 day in milliseconds
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka/      
