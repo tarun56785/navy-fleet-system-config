@@ -8,4 +8,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true    
+    show-sql: true
+application:
+  security:
+    jwt:
+      secret-key: kjZkiL/+bIpdAeYYYrMQCRh0yb+09i/hK23P91sQRBI=
+      expiration: 86400000 # 1 day in milliseconds
