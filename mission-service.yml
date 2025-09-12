@@ -18,3 +18,12 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8888/eureka/
+resilience4j:
+  circuitbreaker:
+    instances:
+      vesselService:
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 15s
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10      
