@@ -18,3 +18,10 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8888/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,metrics,prometheus"
+  tracing:
+    enabled: true
