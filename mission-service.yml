@@ -26,4 +26,11 @@ resilience4j:
         minimumNumberOfCalls: 5
         waitDurationInOpenState: 15s
         slidingWindowType: COUNT_BASED
-        slidingWindowSize: 10      
+        slidingWindowSize: 10
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,metrics,prometheus"
+  tracing:
+    enabled: true     
