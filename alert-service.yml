@@ -24,6 +24,11 @@ spring:
     streams:
       application-id: alert_service_streams
       bootstrap-servers: localhost:9092
+application:
+  security:
+    jwt:
+      secret-key: kjZkiL/+bIpdAeYYYrMQCRh0yb+09i/hK23P91sQRBI=
+      expiration: 86400000 # 1 day in milliseconds      
 
 eureka:
   instance:
